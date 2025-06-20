@@ -1,4 +1,4 @@
-# 🧠 MoodMapper – A RESTful Mood Tracking API with Insights and UI
+# 🧠 MoodMapper – Your Personal Mood Journal & Insight Engine
 
 MoodMapper is a mood journaling platform that helps users log daily emotions and understand their emotional patterns over time. It features a custom-built REST API using Flask and MySQL, with an optional modern frontend powered by Streamlit.
 
