@@ -138,13 +138,31 @@ http://127.0.0.1:5000/
 
 ## 📊 Sample API Request
 
+### POST/users
+
+```
+{
+    "name": "lisa",
+    "email": "lisa@example.com"
+}
+
+
+```
+Response:
+```
+{
+    "message": "User added",
+    "user_id": 10
+}
+
+```
+
 ### POST /moods
 ```
 {
-  "mood": "happy",
-  "trigger_note": "Completed the project",
-  "date": "2025-06-19",
-  "user_id": 1
+    "mood": "Happy",
+    "trigger_note": "Completed project milestone",
+    "user_id": 1
 }
 
 ```
@@ -156,7 +174,69 @@ Response:
 
 ```
 
-
+###  Get Moods for a User (GET)
+- Method: GET
+- URL: http://localhost:5000/moods/1
+```
+[
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 3,
+        "mood": "excited",
+        "trigger_note": "completed project",
+        "user_id": 2
+    },
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 4,
+        "mood": "excited",
+        "trigger_note": "had a fun day ",
+        "user_id": 2
+    },
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 5,
+        "mood": "excited",
+        "trigger_note": "had a fun day ",
+        "user_id": 2
+    }
+]
+```
+### Recent 5 Moods (GET)
+Method: GET
+URL: http://localhost:5000/moods/recent/1
+```
+[
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 2,
+        "mood": "happy",
+        "trigger_note": "completed project",
+        "user_id": 1
+    },
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 6,
+        "mood": "happy",
+        "trigger_note": "attended a session on LLM",
+        "user_id": 1
+    },
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 7,
+        "mood": "happy",
+        "trigger_note": "attended a session on LLM",
+        "user_id": 1
+    },
+    {
+        "date": "Fri, 20 Jun 2025 00:00:00 GMT",
+        "id": 9,
+        "mood": "Happy",
+        "trigger_note": "Completed project milestone",
+        "user_id": 1
+    }
+]
+```
 
 
 
