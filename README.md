@@ -93,7 +93,7 @@ BASE_URL=http://127.0.0.1:5000
 ```
 ✅ The frontend uses BASE_URL to point to the backend — helpful for future deployment flexibility.
 
-##🧑‍💻 How to Run the Project
+## 🧑‍💻 How to Run the Project
 1. Clone & Install
 ```
 git clone https://github.com/your-username/moodmapper.git
