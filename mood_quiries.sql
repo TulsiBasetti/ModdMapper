@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS moodmapper;
+USE moodmapper;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS moods (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    mood VARCHAR(50) NOT NULL,
+    trigger_note TEXT,
+    date DATE NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
